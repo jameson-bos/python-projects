@@ -15,20 +15,18 @@ elif level_choice == "hard" or level_choice == "hard mode":
     print("\nGreat, let's start with the hard level. You will not know the range of the numbers available for the computer to choose.")
 elif level_choice == "free play" or level_choice == "free play mode":
     print("\nOkay, in this mode you will select your own range. Let's get started!")
+    top_of_range = input("What would you like the top of the range to be?")
+    print(f"\nOkay, the computer will choose a number between 1 and {top_of_range}")
 else:
-    print("\nPlease type easy, medium, hard, or free play next time.")
+    print("\nPlease type easy, medium, hard, or free play mode next time.")
     quit()
 
-if level_choice == "free play mode" or level_choice == "free play":
-    top_of_range = input("What would you like the top of your range to be? \n")
-
-if top_of_range.isdigit():
-    top_of_range = int(top_of_range)
-else:
-    print("Please choose a number next time.")
-    quit()
-
-print(f"Okay, the computer will guess anywhere between 1 and {top_of_range}.")
+if level_choice == "free play" or level_choice == "free play mode":
+    if top_of_range.isdigit():
+        top_of_range = int(top_of_range)
+    else:
+        print("Please choose a number next time.")
+        quit()
 
 guesses = 0
 
