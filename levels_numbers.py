@@ -55,7 +55,7 @@ while level_choice == "free play" or level_choice == "free play mode":
         print("You are lower than the computer's choice, try again!")
         continue
 
-while level_choice != "free play" or level_choice != "free play mode":
+while level_choice != "free play" and level_choice != "free play mode":
     guesses += 1
     user_guess = input("\nWhat's your guess? \n")
     if user_guess.isdigit():
