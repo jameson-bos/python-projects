@@ -1,5 +1,6 @@
 import random
 
+# Intro
 print("\nWelcome to the number guessing game!")
 print("The goal of the game is to guess the number the computer chose.")
 
@@ -27,7 +28,9 @@ else:
     quit()
 
 guesses = 0
+hard_top_range = random.randint(50,1000)
 
+# Play Time!
 if level_choice == "free play" or level_choice == "free play mode":
     computer_choice = random.randint(1, top_of_range)   
 elif level_choice == "easy" or level_choice == "easy mode":
@@ -35,7 +38,7 @@ elif level_choice == "easy" or level_choice == "easy mode":
 elif level_choice == "medium" or level_choice == "medium mode":
     computer_choice = random.randint(1, 50)
 elif level_choice == "hard" or level_choice == "hard mode":
-    computer_choice = random.randint(1, 1000)
+    computer_choice = random.randint(1, hard_top_range)
 
 while level_choice == "free play" or level_choice == "free play mode":
     guesses += 1
@@ -73,7 +76,7 @@ while level_choice != "free play" and level_choice != "free play mode":
         print("You are lower than the computer's choice, try again!")
         continue
     
-# End of game    
+# End of Game    
 if guesses == 1:
     print(f"\nYou won in {guesses} guess! Great job, {name}!")
 else:
