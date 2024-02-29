@@ -27,8 +27,9 @@ else:
     print("\nPlease type easy, medium, hard, or free play mode next time.")
     quit()
 
+# Randomizing top of the range, instead of having a defined top of range not revealed to user
+hard_top_range = random.randint(50,10000)
 guesses = 0
-hard_top_range = random.randint(50,1000)
 
 # Play Time!
 if level_choice == "free play" or level_choice == "free play mode":
