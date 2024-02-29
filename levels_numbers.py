@@ -28,6 +28,7 @@ else:
     quit()
 
 # Randomizing top of the range, instead of having a defined top of range not revealed to user
+# Could also randomize the bottom of the range? User is probably under the assumption 1 is the low
 hard_top_range = random.randint(50,10000)
 guesses = 0
 
