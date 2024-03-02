@@ -1,5 +1,5 @@
 import random
-
+### Timer of completed time, printed at the end of the game (guesses, time)
 # Intro
 print("\nWelcome to the number guessing game!")
 print("The goal of the game is to guess the number the computer chose.")
